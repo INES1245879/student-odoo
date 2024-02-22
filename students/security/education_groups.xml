@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <record id="m_category_education" model="ir.module.category">
+            <field name="name">Education management</field>
+            <field name="description">Category for education</field>
+
+        </record>
+
+         <record id="education_group_manager" model="res.groups">
+            <field name="name">education manager access</field>
+            <field name="category_id" ref="students.m_category_education"/>
+         </record>
+
+          <record id="education_group_student" model="res.groups">
+            <field name="name">education student access</field>
+            <field name="category_id" ref="students.m_category_education"/>
+         </record>
+
+
+</odoo>

@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_custom_addons,access_students,model_wb_students,students.education_group_manager,1,1,1,1
+access_custom_addons1,access_students1,model_wb_students,students.education_group_student,1,1,0,1
+access_custom_addons2,access_teachers,model_wb_teachers,,1,1,1,1
+
+

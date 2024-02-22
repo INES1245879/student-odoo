@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+        <record id="web_student_tree_view" model="ir.ui.view">
+            <field name="name">web.student.tree.view</field>
+            <field name="model">wb.students</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="student_ref"/>
+                    <field name="name"/>
+                    <field name="user_id"/>
+                    <field name="address"/>
+                    <field name="classe"/>
+                    <field name="age"/>
+                    <field name="category"/>
+                    <field name="date_of_birth"/>
+
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record id="inherit_view" model="ir.ui.view">
+            <field name="name">inherit view</field>
+            <field name="model">wb.students</field>
+            <field name="inherit_id" ref="web_student_tree_view"/>
+            <field name="arch" type="xml">
+                <tree>
+
+                    <field name="specialization"/>
+                    <field name="teaching_experience"/>
+
+
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="web_student_action" model="ir.actions.act_window">
+
+            <field name="name">Student</field>
+            <field name="res_model">wb.students</field>
+            <field name="view_mode">tree,form</field>
+
+        </record>
+
+
+        <menuitem name="Student" id="wb_student_root_menu"/>
+
+        <menuitem name="weblearns" id="wb_student_sub_root_menu"  parent="wb_student_root_menu"/>
+
+         <menuitem name="student list" id="wb_student_menu" action="web_student_action" parent="wb_student_sub_root_menu"/>
+
+
+
+
+</odoo>
